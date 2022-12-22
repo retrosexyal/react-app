@@ -4,7 +4,7 @@ import Header from "./containers/Header";
 function App() {
   return (
     <>
-      <Header/>
+      <Header test={'from header'}/>
     </>
   );
 }
