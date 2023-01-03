@@ -2,18 +2,24 @@ import React from "react";
 import styled from "styled-components";
 import { StyledFlexCont } from "../../styles/SyledComponents/StyledFlexCont";
 
+let bg = "#cbf7df";
 const StyledCardPage = styled(StyledFlexCont)`
   width: 40px;
   height: 40px;
   border: 1px solid black;
   border-radius: 50%;
-  background-color: #cbf7df;
+  background-color: ${bg};
 `;
 
-function CardPage({title, setNumberPages}:{title:number, setNumberPages: any}) {
-
+function CardPage({
+  title,
+  setNumberPages,
+}: {
+  title: number;
+  setNumberPages: any;
+}) {
   const handleClick = () => {
-    return setNumberPages(title)
+    setNumberPages(title);
   };
 
   return <StyledCardPage onClick={handleClick}>{title}</StyledCardPage>;

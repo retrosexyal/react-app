@@ -16,7 +16,7 @@ function Home() {
 
   return <div>
     <CardsCont page={getPages} numberPage={numberPage}/>
-    <PageCardCont pageNumber={pages} setNumberPages={setNumberPages}/> 
+    <PageCardCont pageNumber={pages} setNumberPages={setNumberPages} numberPage={numberPage}/> 
   </div>;
 }
 
