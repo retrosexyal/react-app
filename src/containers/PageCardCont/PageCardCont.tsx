@@ -33,16 +33,16 @@ function PageCardCont({
             e === arrOfPages.length && e !== numberPage 
           )
             return (
-              <CardPage setNumberPages={setNumberPages} key={e} title={e} />
+              <React.Fragment key={e}>
+              {e===arrOfPages.length && '...'}
+              <CardPage setNumberPages={setNumberPages}  title={e} />
+              {e===1 && '...'}
+              </React.Fragment>
             );
 
-            if ( e === numberPage ) {
-              return (
-                <>
-                <>...</>
-                <CardPage setNumberPages={setNumberPages} key={e} title={e} />
-                <>...</>
-                </>
+            if ( e === numberPage) {
+              return (             
+                <CardPage bgColor="#62a380" setNumberPages={setNumberPages} key={e} title={e} />
               )
             }
         })}

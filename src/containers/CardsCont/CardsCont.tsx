@@ -5,7 +5,7 @@ import Card from "../../components/Card/Card";
 import styled from "styled-components";
 import { StyledFlexCont } from "../../styles/SyledComponents/StyledFlexCont";
 
-const StyledCardCont = styled(StyledFlexCont)`
+export const StyledCardCont = styled(StyledFlexCont)`
   flex-wrap: wrap;
   gap: 20px;
 `;
@@ -25,6 +25,7 @@ function CardsCont({page, numberPage}:{page:any, numberPage: number}) {
 
   return (
     <StyledCardCont>
+      {!isLoad && <div>loading..</div>}
       {isLoad &&
         data?.map((e) => {
           return (

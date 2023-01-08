@@ -1,8 +1,17 @@
-import React from 'react';
+import React, {FC} from 'react';
 import { IButton } from './IButton';
+import styled from 'styled-components';
 
-function Button(props: IButton){
-    return(<button>{props.title}</button>)
+const StyledButton = styled.button`
+
+`
+const Button:FC<IButton> = (props) =>{
+    return(<StyledButton onClick={props.onClick} >{props.title}</StyledButton>)
 }
+
+
+/* function Button(props: IButton){
+    return(<StyledButton>{props.title}</StyledButton>)
+} */
 
 export default Button;

@@ -15,6 +15,7 @@ function Header(props: IHader) {
     <StyledHeader>
       <Link href={props.hrefHome} title="Home" />
       <Link href={props.hrefFavorites} title="Favorites" />
+      <Link href={props.hrefTest} title="Test" />
     </StyledHeader>
   );
 }
