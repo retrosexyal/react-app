@@ -3,6 +3,7 @@ export interface IResults {
     name: string;
     status: string;
     image: string;
+    isFavorit?: boolean;
 
 }
 export interface ICard{
